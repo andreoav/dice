@@ -1,0 +1,9 @@
+version: '2'
+
+tasks:
+  generate:
+    cmds:
+      - protoc --go_out=plugins=grpc:./pkg ./api/**/*.proto
+  run_server:
+    cmds:
+      - go run cmd/roll-server/main.go

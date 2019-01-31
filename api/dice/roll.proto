@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package api.dice;
+
+option go_package = "dice";
+
+message RollRequest { string input = 1; }
+message RollResponse { int32 result = 1; }
+service RollService { rpc Roll(RollRequest) returns (RollResponse); }
